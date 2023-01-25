@@ -39,6 +39,8 @@ body {font-family: Roboto;
      
 /* Header */
 
+
+
 .head-total {
     
     display: flex;
@@ -66,7 +68,7 @@ body {font-family: Roboto;
 }
 .logo .link {
     
-margin-right: 76px;
+
 font-family: 'Raleway';
 font-weight: 800;
 font-size: 18px;
@@ -121,6 +123,8 @@ text-decoration: none;
 
 
 /* Buttoms */
+
+
 .point:hover,
 .point:focus {
     color: #404BBF;
@@ -229,12 +233,17 @@ letter-spacing: 0.04em;
     width: 100%;
     height: 100%;
     display: flex;
+   margin-bottom: 8px;
 }
 
 
 .content {
-   
+ display: flex;  
 margin-bottom: 8px;
+gap: 24px;
+
+align-items: center;
+justify-content: center;
 font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
@@ -245,6 +254,7 @@ color: var(--primary-text-color);
 
 .direction {
   max-width: 264px;
+  margin-bottom: 8px;
 font-size: 16px;
 line-height: var(--line-height);
 letter-spacing: 0.02em;
@@ -339,39 +349,49 @@ letter-spacing: 0.02em;
 color: var(--primary-text-color);
 }
 
-
-.card  {
-
-box-sizing: border-box;
-      
+/* Portfolio */
+.card {
+    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    
+    
     column-gap: 24px;
     row-gap: 48px;
 }
 
-.pic:hover{
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.card .pic {
-    
-    margin-right: auto;
-    margin-left: auto;
-    
- }
+.progect-card {
+   display: flex;
+    list-style: none;
+        }
 
  .card-content {
+   width: 100%;
+   height: 120px;
+   padding-top: 32px;
+  padding-right: 16px;
+   padding-bottom: 32px;
+   padding-left: 16px;
    
-    padding-top: 32px;
-    padding-right: 16px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-   
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    border: 1px solid #E7E9FC
+   border: 1px solid #E7E9FC;
  }
+
+
+
+ .portfolio-content {
+    display: flex;  
+margin-bottom: 8px;
+
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: var(--primary-text-color);
+ }
+
+ .progect-card:hover {
+    box-shadow: 0px 1px 6px;
+}
+
  .portfolio {
     padding-top: 96px;
     padding-bottom: 120px;
@@ -422,10 +442,9 @@ margin-bottom: 120px;
  }
  .section-name {
     padding-bottom: 72px;
-    line-height: 1.11;
 
+    line-height: 1.11;
     text-align: center;
-    
     letter-spacing: 0.02em;
     
     color: var(--primary-text-color);
@@ -437,12 +456,13 @@ margin-bottom: 120px;
     list-style: none;
  }
  .branch {
-    width: calc((100%-120px) / 6);
+    width: 168px;
     height: 88px;
  }
  .clients{
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
     border: 1px solid #8E8F99;
     border-radius: 4px;
     display: flex;
@@ -452,21 +472,18 @@ margin-bottom: 120px;
  }
  .clients:hover,
  .clients:focus {
-   border-color: #404BBF;
-   color: #404bbf;
-  
- }
+  border-color:#404BBF; 
+  fill: #404BBF;
+   }
 
- .clients:is(:hover, :focus) .dots {
-   color: #404BBF;
-    
- }
+   .clients:is(:hover, :focus) .dots{
+    border-color:#404BBF; 
+fill: #404BBF;
+   }
+   
+   
  
- .dots:hover,
- .dots:focus {
-    
-   fill: #404BBF;
- }
+ 
  
 
 /* Footer */
@@ -513,40 +530,46 @@ color: #FFFFFF;
     display: flex;
     gap: 16px;
     list-style: none;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+
+    
     background-color: var(--primary-text-color);
 
 }
 
-.media-icons {
+.internal-icons {
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-align-items: center;
-justify-content: center;
-border-radius: 50%;
+
 }
 
-.media-icons :hover,
-.media-icons :focus {
-    width: 40px;
-    height: 40px; 
-    border-radius:50%;
+.media-icons {
+display: flex;
+width: 24px;
+height: 24px;
+align-items: center;
+justify-content: center;
+
+}
+
+.internal-icons:hover,
+.internal-icons:focus {  
 background: #31D0AA;
 
 }
 
-
-.social-media-icons {
-  display: flex;
-   
-   align-items: center;
-   justify-content: center;
-  fill: #FFFFFF;
-  
- 
+.media-icons:focus{
+    background: #31D0AA;
 }
+
+
+
 .full-footer {
     display: flex;
     align-items: baseline;
